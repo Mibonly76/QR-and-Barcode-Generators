@@ -1,6 +1,6 @@
 from barcode import EAN13
 from datetime import datetime
-file_name_id = str("My_QR_Code_") + datetime.now().strftime('%d%m%Y-%H%M%S')
+file_name_id = str("My_BarCode_") + datetime.now().strftime('%d%m%Y-%H%M%S')
 
 number = input("Enter The Number: ")
 
