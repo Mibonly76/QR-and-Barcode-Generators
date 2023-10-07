@@ -4,10 +4,10 @@ file_name_id = str("My_QR_Code_") + datetime.now().strftime('%d%m%Y-%H%M%S')
 
 number = input("Enter The Number: ")
 
-if not number.isdigit():
-    print("The entry value is not correct! It must be digits!")
+if not number.isdigit() or len(number) != 12:
+    print("The entry value is not correct! It must be twelve digits!")
     exit(200)
 else:
-    number = int(number)
     my_code = EAN13(number)
-    my_code.save(f"{file_name_id}.png")
+    my_code.save(f"{file_name_id}")
+
