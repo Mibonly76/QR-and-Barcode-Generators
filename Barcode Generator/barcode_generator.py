@@ -10,4 +10,3 @@ if not number.isdigit() or len(number) != 12:
 else:
     my_code = EAN13(number)
     my_code.save(f"{file_name_id}")
-
