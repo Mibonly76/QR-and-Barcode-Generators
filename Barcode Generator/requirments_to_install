@@ -1,2 +1,3 @@
 pip install qrcode
 pip install datetime
+pip install python-barcode
