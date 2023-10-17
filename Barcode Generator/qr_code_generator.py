@@ -1,5 +1,7 @@
 import qrcode
 from datetime import datetime
+import shutil
+# import os
 
 # Linked QR Code
 
@@ -14,4 +16,7 @@ data = input("Input your data: ")
 qr.add_data(data)
 qr.make(fit=True)
 img = qr.make_image(fill='black', back_color='white')
-img.save(f'{file_name_id}.png')
+image_name = f'{file_name_id}.png'
+img.save(image_name)
+dst_path = f"static\{image_name}"
+shutil.move(image_name, dst_path)
